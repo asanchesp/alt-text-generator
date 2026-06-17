@@ -90,7 +90,7 @@ const toneOptions: { label: string; value: Tone }[] = [
 export function OutputControls({ value, onChange }: Props) {
   return (
     <div className="space-y-6">
-      <div className="space-y-2">
+      <div className="flex flex-col gap-[8px]">
         <span className="text-sm font-medium text-[var(--color-ink-700)]">Detail level</span>
         <PillGroup
           options={detailOptions}
@@ -116,7 +116,7 @@ export function OutputControls({ value, onChange }: Props) {
         onChange={(v) => onChange({ ...value, variationsCount: v })}
       />
 
-      <div className="space-y-2">
+      <div className="flex flex-col gap-[8px]">
         <span className="text-sm font-medium text-[var(--color-ink-700)]">Tone</span>
         <PillGroup
           options={toneOptions}

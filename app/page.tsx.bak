@@ -31,6 +31,9 @@ function Section({ number, title, children }: SectionProps) {
   return (
     <section className="space-y-4">
       <div className="flex items-baseline gap-3">
+        <span className="text-xs font-medium tracking-widest text-[var(--color-ink-300)] uppercase tabular-nums">
+          {String(number).padStart(2, '0')}
+        </span>
         <h2 className="text-base font-medium text-[var(--color-ink-900)]">{title}</h2>
       </div>
       <div className="rounded-xl border border-[var(--color-border)] bg-[var(--color-card)] px-6 py-6">
@@ -148,16 +151,10 @@ export default function HomePage() {
     <main className="min-h-screen px-4 py-16">
       <div className="mx-auto max-w-2xl space-y-10">
         {/* Header */}
-        <header className="space-y-3">
-          <div className="flex items-center gap-3">
-            <svg width="36" height="36" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="32" height="32" rx="8" fill="#2C2C2A"/>
-              <text x="16" y="22" textAnchor="middle" fontFamily="Georgia,serif" fontSize="15" fontWeight="700" fill="white">alt</text>
-            </svg>
-            <h1 className="text-2xl font-semibold tracking-tight text-[var(--color-ink-900)]">
-              Alt Text Generator
-            </h1>
-          </div>
+        <header className="space-y-2">
+          <h1 className="text-2xl font-semibold tracking-tight text-[var(--color-ink-900)]">
+            Alt Text Generator
+          </h1>
           <p className="text-sm text-[var(--color-ink-500)]">
             Accessibility-first descriptions for screen reader users — no keyword stuffing, no
             filler.
@@ -169,14 +166,13 @@ export default function HomePage() {
           <UploadZone images={images} onChange={setImages} />
         </Section>
 
-        {/* Section 2 — Context (hidden, not deleted)
+        {/* Section 2 — Context */}
         <Section number={2} title="Context (optional)">
           <ContextForm value={context} onChange={setContext} />
         </Section>
-        */}
 
-        {/* Section 2 — Output controls */}
-        <Section number={2} title="Output controls">
+        {/* Section 3 — Output controls */}
+        <Section number={3} title="Output controls">
           <OutputControls value={controls} onChange={setControls} />
         </Section>
 
