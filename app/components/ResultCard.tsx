@@ -127,6 +127,12 @@ export function ResultCard({ result, index, onRegenerate, onReplaceImage }: Prop
       {/* Card header */}
       <div className="px-5 py-3.5 flex items-center gap-3 border-b border-[var(--color-border)]">
         <StatusDot status={result.status} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={result.previewUrl}
+          alt=""
+          className="w-8 h-8 rounded object-cover flex-shrink-0"
+        />
         <span className="flex-1 text-sm font-medium text-[var(--color-ink-700)] truncate">
           {index + 1}. {result.filename}
         </span>
