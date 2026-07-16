@@ -252,6 +252,13 @@ export default function HomePage() {
             </div>
           </div>
         )}
+
+        {/* Footer */}
+        <footer className="pt-6 text-center">
+          <p className="text-xs text-[var(--color-ink-300)]">
+            Copyright © 2026. Developed by Andre Sanches.
+          </p>
+        </footer>
       </div>
     </main>
   );
