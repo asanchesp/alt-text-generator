@@ -3,7 +3,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import type { AIResponse, Controls, Context } from './types';
 import { SYSTEM_PROMPT, buildUserPrompt } from './prompts';
 
-const GEMINI_MODEL = 'gemini-flash-latest';
+const GEMINI_MODEL = 'gemini-flash-lite-latest';
 const ANTHROPIC_MODEL = 'claude-haiku-4-5';
 const GROQ_MODEL = 'meta-llama/llama-4-scout-17b-16e-instruct';
 
